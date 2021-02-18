@@ -1,0 +1,11 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navbar.ejs') %>
+    <div id="home">
+        <section class="pesquisa" >
+            <form action="booklover/find" method="POST">
+                <input class="campo" name="campo" type="text" placeholder="Digite o titulo ou o nome do autor">
+                <button class="botao">Search</button>
+            </form>
+        </section>
+    </div>
+<%- include('./partials/footer.ejs') %> 

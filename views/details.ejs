@@ -1,0 +1,27 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navbar.ejs') %>    
+    <div class="container">
+        <div id="home">
+        <div class="row">
+            <div class="col-sm-4">
+                <div class="card bg-light">
+                    <div class="card-body">
+                        <img src="<%- book.thumbnail %> " class="card-img-top" alt="...">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card">
+                    <div class="card-body">
+                        <p><b><%- book.title %></b> </p>
+                        <p><%- book.description %> </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <a href="/" class="btn botao">Buy</a>
+    </div>
+    </div>
+<%- include('./partials/footer.ejs') %>

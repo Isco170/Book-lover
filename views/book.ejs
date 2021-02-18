@@ -1,0 +1,35 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navbar.ejs') %>
+    <div class="container">
+        <div class="home">
+            <div class="row">
+                <% results.forEach(book => { %>
+                    <% if (book.thumbnail) { %>
+                        <div class="col-sm-4">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col">
+                                            <img src="<%- book.thumbnail %> " class="img-thumbnail" alt="...">
+                                        </div>
+                                        <div class="col">
+                                            <h5 class="card-title"><%- book.title %> </h5>
+                                            <h6 class="h6 card-text text-muted"> <%- book.authors %> </h6>
+                                            <ul>
+                                                <li>Rating: <%- book.averageRating %> </li>
+                                                <li>Lang: <%- book.language %> </li>
+                                                <li>Date: <%- book.publishedDate %> </li>
+                                            </ul>
+                                            <a href="/booklover/details/<%- book.id %>" class="btn btn-sm btn-primary">See</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    <% } %>
+                <% }) %>
+            </div>
+        </div>
+
+    </div>    
+<%- include('./partials/footer.ejs') %>
