@@ -1,7 +1,5 @@
 const books = require('google-books-search');
-const APIKey = require('chaves');
-
-const chave = APIKey.key;
+const chave = require('chaves');
 
 const search_book = (req, res) =>{
 
